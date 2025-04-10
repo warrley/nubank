@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import { Header } from "@/components/header";
+import { ScrollView, Text, View } from "react-native";
 
 export default function Screen() {
     return (
-        <View className="text-red-500">
-            <Text className="text-red-500">cuida</Text>
-        </View>
+        <ScrollView className="h-screen bg-white">
+            <Header />
+        </ScrollView>
     )
 }
