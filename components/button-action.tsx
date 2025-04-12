@@ -1,7 +1,6 @@
 import { Pressable, Text, View } from "react-native";
 import Icon from '@expo/vector-icons/FontAwesome6';
 
-
 type Props = {
     icon: string;
     label: string;

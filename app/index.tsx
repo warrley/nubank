@@ -1,7 +1,9 @@
 import { ButtonAction } from "@/components/button-action";
 import { ButtonCard } from "@/components/button-card";
+import { ButtonGeneral } from "@/components/button-general";
 import { Header } from "@/components/header";
-import { Button, ScrollView, StatusBar, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
+import Icon from '@expo/vector-icons/FontAwesome6';
 
 export default function Screen() {
     return (
@@ -18,6 +20,34 @@ export default function Screen() {
                 <ButtonAction icon="hand-holding-dollar" label="Pegar emprestado" onPress={() => {}}/>
                 <ButtonAction icon="money-bill-transfer" label="Transferir" onPress={() => {}}/>
                 <ButtonAction icon="receipt" label="Dinheiro" onPress={() => {}}/>
+            </ScrollView>
+
+            <View className="px-4 py-6">
+                <ButtonGeneral onPress={() => { }}>
+                    <View className="flex-row items-center">
+                        <Icon name="credit-card" size={28} color="black" />
+                        <Text className="text-lg font-semibold ml-4">My cards</Text>
+                    </View>
+                </ButtonGeneral>
+            </View>
+
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} className="px-4">
+                <View className="w-72 mr-4">
+                    <ButtonGeneral onPress={() => { }}>
+                        <View className="flex-row flex-wrap gap-x-1">
+                            <Text className="text-lg">You have </Text>
+                            <Text className="font-semibold">R$12.300,00 </Text>
+                            <Text className="text-lg">ready to borrow.</Text>
+                        </View>
+                    </ButtonGeneral>
+                </View>
+
+                <View className="w-72">
+                    <ButtonGeneral onPress={() => { }}>
+                        <Text className="font-semibold text-nubank text-lg">Save your money here</Text>
+                        <Text className="text-lg">Tap to learn more.</Text>
+                    </ButtonGeneral>
+                </View>
             </ScrollView>
         </ScrollView>
     )
